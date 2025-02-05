@@ -1,19 +1,32 @@
 project:
   type: website
+  output-dir: docs
+  render:
+    - "*.qmd"
 
 website:
-  title: "temp_name"
+  title: "Natalia Morales Flores"
   navbar:
     left:
       - href: index.qmd
         text: Home
-      - about.qmd
+      - text: Projects
+        menu: 
+          - Projects.qmd
+      - text: Posts
+        menu: 
+          - posts.qmd
+
+  page-footer:
+    left: |
+      &copy; Natalia Morales Flores, 2025<br>
+    right: |
+      Site built with <a href='https://quarto.org/'>Quarto</a>
 
 format:
   html:
-    theme: cosmo
+    theme: lux
     css: styles.css
     toc: true
 
 editor: visual
-
