@@ -1,15 +1,20 @@
 ---
-title: "Posts"
-listing:
-  contents: posts
-  sort: "date desc"
-  type: default
-  categories: true
-  sort-ui: true
-  filter-ui: true
+title: ""
 page-layout: full
-title-block-banner: true
-comments: false
+title-block-banner: false
+format:
+  html:
+    theme: journal
+    css: styles.css
+    toc: false
 ---
 
-### No posts yet
+## Experiences
+
+<embed src="Natalia Resume.pdf" type="application/pdf" width="100%" height="700px" />
+
+<p style="text-align: center;">
+
+<a href="Natalia Resume.pdf" download> Download Resume (PDF)</a>
+
+</p>

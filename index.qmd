@@ -4,29 +4,17 @@ about:
   id: intro-heading
   template: trestles
   image: images/Photo.png
-  links:
-    - icon: github
-      href: https://github.com/nbmoralesf
-
+toc: true #Makes the table of contents visible
 ---
 
-### Welcome to my portfolio! 
+### Welcome to my portfolio!
 
-:::{#intro-heading}
-
-This website displays my projects and experience in college-level research. I am a third-year student at Macalester College pursuing a double major in Data Science and Political Science. I am part of the 2025 Chuck Green Fellowship cohort and the current chair of Macalester Adelante! student organization.
+::: {#intro-heading}
+This website displays my projects and experience in college-level research. I am a third-year student at Macalester College pursuing a double major in Data Science and Political Science. I am part of the 2025 Chuck Green Fellowship cohort and the current chair of Macalester Adelante! student organization.\
 \
-\
-I am passionate about combining my data analytics skills with my public policy knowledge to create responsible, data-driven solutions for political and social issues of the modern world. I approach problem-solving with a global outlook and a focus on collaboration, valuing strong, meaningful relationships within a team. 
+I am passionate about combining my data analytics skills with my public policy knowledge to create responsible, data-driven solutions for political and social issues of the modern world. I approach problem-solving with a global outlook and a focus on collaboration, valuing strong, meaningful relationships within a team.
 
 ## Education
 
-Macalester College | St. Paul MN <br>
-B.A. in Data Science and Political Science | Sept 2022 - May 2026
-
-
-
-
-
-
-
+Macalester College \| St. Paul MN <br> B.A. in Data Science and Political Science \| Sept 2022 - May 2026
+:::

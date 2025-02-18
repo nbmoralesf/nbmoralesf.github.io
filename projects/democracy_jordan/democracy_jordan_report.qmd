@@ -1,0 +1,13 @@
+---
+title: "Perceived Suitability of Democracy in Jordan"
+description: "What are the strongest factors affecting the popular perception of the suitability of democracy in Jordan?"
+image: featured.png
+image-alt: quizgrader logo
+categories:
+  - Empirical Research
+  - Data Analysis
+  - Political Science
+about:
+  template: solana
+  image: featured.png
+---
