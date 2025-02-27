@@ -13,7 +13,7 @@ website:
       - href: Projects.qmd
         text: Projects
       - href: posts.qmd
-        text: Posts
+        text: CV
         
     right: 
       - icon: github

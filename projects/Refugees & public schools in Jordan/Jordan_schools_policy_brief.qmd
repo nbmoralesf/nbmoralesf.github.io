@@ -1,0 +1,22 @@
+---
+title: "Policy Brief: Public Schools in Jordan as Refugee Settings"
+description: "Teacher Management"
+image: featured.png
+image-alt: quizgrader logo
+categories:
+  - Policy Brief
+  - Political Science
+  - Jordan
+about:
+  template: solana
+  image: featured.png
+---
+As the refugee population grows every day, the education systems are less prepared to integrate these new neighbors as students. Despite this, Jordan’s effort and dedication to improving the access and quality of the education that the refugee population receives. Based on the results and findings of UNESCO’s study, along with the IIEP and the Education Development Trust, Teacher Management in Refugee Settings: Public Schools in Jordan, this Policy Brief aims to provide context and guidance regarding the management and elementary-level teachers for public schools focused on Syrian refugees. The document intends to be a base and support for key collaborators of the Jordanian Ministry of Education in the process of creation and improvement of teacher management policies. The goal is to ensure a “high-quality, inclusive, and equitable education system”. 
+
+<!-- <embed src="Policy_Brief_Jr_Pub_Schools.pdf" type="application/pdf" width="75%" height="500px" /> -->
+
+<!-- <p style="text-align: center;"> -->
+
+<a href="Policy_Brief_Jr_Pub_Schools.pdf" download> Download Policy Brief (PDF)</a>
+
+</p>
