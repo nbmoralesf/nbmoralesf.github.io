@@ -1,0 +1,20 @@
+---
+title: "Annual Personal Consumption of Coffee"
+description: "Finding a mathematical model, visualize its behavior, and explore how integrals and Riemann sums can help estimate average coffee consumption over a given age range."
+image: featured.png
+image-alt: quizgrader logo
+categories:
+  - Data Analysis
+  - Calculus
+about:
+  template: solana
+  image: featured.png
+---
+
+This project models coffee consumption as a function of age and sleep using a linear equation based on external research and assumptions. Implemented in Mathematica, the model estimates annual consumption and visualizes how it varies across age and sleep ranges using a 3D surface plot. To analyze long-term impact, I used Riemann sums and integrals to compute total consumption between ages 18 and 70, yielding an estimated 12,000 cups over a lifetime.
+
+Additionally, I calculated the average coffee consumption between ages 30 and 50 using the definite integral of the function, resulting in a value of 230 cups per year. These tools allowed me to transform a simple behavioral pattern into a quantitative analysis of daily habits. While the model is limited by its linear assumptions and scope, it effectively demonstrates how calculus can provide insight into lifestyle-driven data over time.
+
+<a href="Project 3.pdf" download> Download Report (PDF)</a>
+
+</p>
