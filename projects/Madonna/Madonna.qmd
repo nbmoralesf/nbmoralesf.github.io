@@ -15,7 +15,4 @@ In this project, 48 of Madonna’s songs that reached the Billboard Top 100 were
 
 PCA helped reduce dimensionality while preserving interpretability, with the first two components explaining approximately 36% of the variance. These components revealed that tempo and valence—both linked to a song’s emotional tone and energy—were key characteristics in her most successful tracks. This analysis provides a data-driven framework for understanding Madonna’s stylistic range and could help inform playlist creation or music recommendation systems, as well as audience-targeted music production.
 
-
 [View Report](group_assignment_3.html){target="_blank"}
-
-
