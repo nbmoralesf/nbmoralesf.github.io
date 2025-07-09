@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Natalia Morales Flores</title>
+<title>Resume – Natalia Morales Flores</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -33,6 +33,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
@@ -88,7 +89,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="./index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
@@ -96,7 +97,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Projects</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./resume.html"> 
+    <a class="nav-link active" href="./resume.html" aria-current="page"> 
 <span class="menu-text">Resume</span></a>
   </li>  
 </ul>
@@ -119,50 +120,38 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#welcome-to-my-portfolio" id="toc-welcome-to-my-portfolio" class="nav-link active" data-scroll-target="#welcome-to-my-portfolio">Welcome to my portfolio!</a></li>
-  </ul>
-</nav>
-    </div>
+    
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content column-page" id="quarto-document-content">
 
-
-
-
-<section id="welcome-to-my-portfolio" class="level3">
-<h3>Welcome to my portfolio!</h3>
-<div class="quarto-about-trestles">
-  <div class="about-entity">
-    <img src="images/Photo.png" class="about-image
-  rounded " style="width: 20em;">
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Natalia Morales Flores</h1>
+<h1 class="title">Resume</h1>
 </div>
-<div class="quarto-title-meta">
+
+
+
+<div class="quarto-title-meta column-page">
+
+    
+  
+    
   </div>
+  
+
+
 </header>
-  </div>
-  <div class="about-contents"><div id="intro-heading">
-<p>This website displays my projects and experience in college-level research. I am a third-year student at Macalester College pursuing a double major in Data Science and Political Science. I am part of the 2025 Chuck Green Fellowship cohort and the current chair of Macalester Adelante! student organization.<br>
-<br>
-I am passionate about combining my data analytics skills with my public policy knowledge to create responsible, data-driven solutions for political and social issues of the modern world. I approach problem-solving with a global outlook and a focus on collaboration, valuing strong, meaningful relationships within a team.</p>
-<section id="education" class="level2">
-<h2 data-anchor-id="education">Education</h2>
-<p>Macalester College | St.&nbsp;Paul MN <br> B.A. in Data Science and Political Science | Sept 2022 - May 2026</p>
-</section>
-</div></div>
-</div>
 
 
+<section id="experiences" class="level2">
+<h2 class="anchored" data-anchor-id="experiences">Experiences</h2>
+<embed src="Natalia Resume.pdf" type="application/pdf" width="100%" height="700px">
+<p style="text-align: center;">
+</p><p><a href="Natalia Resume.pdf" download=""> Download Resume (PDF)</a></p>
+<p></p>
 
 
 </section>
@@ -188,6 +177,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
   const isCodeAnnotation = (el) => {
     for (const clz of el.classList) {
       if (clz.startsWith('code-annotation-')) {                     

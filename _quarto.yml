@@ -3,6 +3,9 @@ project:
   output-dir: docs
   render:
     - "*.qmd"
+    
+resources:
+  - html/group_assignment_3.html
 
 website:
   title: "Natalia Morales Flores"
@@ -12,8 +15,8 @@ website:
         text: Home
       - href: Projects.qmd
         text: Projects
-      - href: posts.qmd
-        text: CV
+      - href: resume.qmd
+        text: Resume
         
     right: 
       - icon: github

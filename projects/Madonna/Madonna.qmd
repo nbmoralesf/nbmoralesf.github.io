@@ -1,0 +1,21 @@
+---
+title: "Feature-Based Clustering of Madonna’s Billboard Hits Using PCA and Hierarchical Methods"
+image: featured.png
+image-alt: quizgrader logo
+categories:
+  - Machine Learning
+  - Data Analysis
+  - Collaborative Work
+about:
+  template: solana
+  image: featured.png
+---
+
+In this project, 48 of Madonna’s songs that reached the Billboard Top 100 were analyzed, using unsupervised machine learning techniques to uncover patterns in her musical style. We used hierarchical clustering and Principal Component Analysis (PCA) on 11 audio features obtained from the Spotify API—such as danceability, tempo, acousticness, and valence—to group the songs by similarity. After scaling the data, clustering revealed 7 musically distinct clusters, ranging from upbeat dance tracks to theatrical ballads, including unique outliers that stood apart from her mainstream catalog.
+
+PCA helped reduce dimensionality while preserving interpretability, with the first two components explaining approximately 36% of the variance. These components revealed that tempo and valence—both linked to a song’s emotional tone and energy—were key characteristics in her most successful tracks. This analysis provides a data-driven framework for understanding Madonna’s stylistic range and could help inform playlist creation or music recommendation systems, as well as audience-targeted music production.
+
+
+[View Report](group_assignment_3.html){target="_blank"}
+
+

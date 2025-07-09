@@ -18,12 +18,12 @@
     "href": "Projects.html",
     "title": "Projects",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nYouTube genres\n\n\n\nData Analysis\n\n\nCollaborative Work\n\n\n\nContent Categorization and Viewer Behavior: What is the relationship between a YouTuber’s category and their popularity, as measured by the number of subscribers and video…\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPolicy Brief: Public Schools in Jordan as Refugee Settings\n\n\n\nPolicy Brief\n\n\nPolitical Science\n\n\nJordan\n\n\n\nTeacher Management\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPerceived Suitability of Democracy in Jordan\n\n\n\nEmpirical Research\n\n\nData Analysis\n\n\nPolitical Science\n\n\nJordan\n\n\n\nWhat are the strongest factors affecting the popular perception of the suitability of democracy in Jordan?\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nYouTube genres\n\n\n\nData Analysis\n\n\nCollaborative Work\n\n\n\nContent Categorization and Viewer Behavior: What is the relationship between a YouTuber’s category and their popularity, as measured by the number of subscribers and video…\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPolicy Brief: Public Schools in Jordan as Refugee Settings\n\n\n\nPolicy Brief\n\n\nPolitical Science\n\n\nJordan\n\n\n\nTeacher Management\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPerceived Suitability of Democracy in Jordan\n\n\n\nEmpirical Research\n\n\nData Analysis\n\n\nPolitical Science\n\n\nJordan\n\n\n\nWhat are the strongest factors affecting the popular perception of the suitability of democracy in Jordan?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFeature-Based Clustering of Madonna’s Billboard Hits Using PCA and Hierarchical Methods\n\n\n\nMachine Learning\n\n\nData Analysis\n\n\nCollaborative Work\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts.html",
     "href": "posts.html",
-    "title": "Natalia Morales Flores",
+    "title": "Resume",
     "section": "",
     "text": "Download Resume (PDF)"
   },
@@ -37,7 +37,7 @@
   {
     "objectID": "posts.html#experiences",
     "href": "posts.html#experiences",
-    "title": "Natalia Morales Flores",
+    "title": "Resume",
     "section": "",
     "text": "Download Resume (PDF)"
   },
@@ -61,5 +61,26 @@
     "title": "YouTube genres",
     "section": "",
     "text": "YouTube has become a prominent platform in which creators from diverse backgrounds and with diverse intentions choose to share their work. We initiated this research project after noticing compelling content on certain YouTube channels that, despite their potential for wider acclaim, haven’t received the recognition they merit, or on the other hand, seem to receive more recognition than what one would expect. This observation sparked our interest in understanding the factors that influence the popularity of a YouTube channel. Our research question for this project poses the inquiry of What is the relationship between a YouTuber’s category and their popularity, as measured by the number of subscribers and video views? Our goal with this research is to uncover the primary elements that contribute to a YouTube channel’s success and to identify if a channel’s category and content type are influential factors. From an individual content creator perspective, insights into popularity factors can contribute to strategy for audience engagement and the enhancement of visibility and impact of the desired content. From a broader point of view, understanding these relationships can contribute to the understanding of media culture and digital trends and influence. This is a comprehensive analysis to identify strategies for boosting a channel’s popularity.\n Download Report (PDF)"
+  },
+  {
+    "objectID": "projects/Madonna/Madonna.html",
+    "href": "projects/Madonna/Madonna.html",
+    "title": "Feature-Based Clustering of Madonna’s Billboard Hits Using PCA and Hierarchical Methods",
+    "section": "",
+    "text": "In this project, 48 of Madonna’s songs that reached the Billboard Top 100 were analyzed, using unsupervised machine learning techniques to uncover patterns in her musical style. We used hierarchical clustering and Principal Component Analysis (PCA) on 11 audio features obtained from the Spotify API—such as danceability, tempo, acousticness, and valence—to group the songs by similarity. After scaling the data, clustering revealed 7 musically distinct clusters, ranging from upbeat dance tracks to theatrical ballads, including unique outliers that stood apart from her mainstream catalog.\nPCA helped reduce dimensionality while preserving interpretability, with the first two components explaining approximately 36% of the variance. These components revealed that tempo and valence—both linked to a song’s emotional tone and energy—were key characteristics in her most successful tracks. This analysis provides a data-driven framework for understanding Madonna’s stylistic range and could help inform playlist creation or music recommendation systems, as well as audience-targeted music production.\nView Report"
+  },
+  {
+    "objectID": "resume.html",
+    "href": "resume.html",
+    "title": "Resume",
+    "section": "",
+    "text": "Download Resume (PDF)"
+  },
+  {
+    "objectID": "resume.html#experiences",
+    "href": "resume.html#experiences",
+    "title": "Resume",
+    "section": "",
+    "text": "Download Resume (PDF)"
   }
 ]
