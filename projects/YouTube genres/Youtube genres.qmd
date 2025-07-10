@@ -1,6 +1,7 @@
 ---
 title: "YouTube genres"
 description: "Content Categorization and Viewer Behavior: What is the relationship between a YouTuber’s category and their popularity, as measured by the number of subscribers and video views?"
+priority: 6
 image: featured.png
 image-alt: quizgrader logo
 categories:
@@ -10,7 +11,8 @@ about:
   template: solana
   image: featured.png
 ---
-YouTube has become a prominent platform in which creators from diverse backgrounds and with diverse intentions choose to share their work. We initiated this research project after noticing compelling content on certain YouTube channels that, despite their potential for wider acclaim, haven't received the recognition they merit, or on the other hand, seem to receive more recognition than what one would expect. This observation sparked our interest in understanding the factors that influence the popularity of a YouTube channel. Our research question for this project poses the inquiry of What is the relationship between a YouTuber’s category and their popularity, as measured by the number of subscribers and video views? Our goal with this research is to uncover the primary elements that contribute to a YouTube channel's success and to identify if a channel’s category and content type are influential factors. From an individual content creator perspective, insights into popularity factors can contribute to strategy for audience engagement and the enhancement of visibility and impact of the desired content. From a broader point of view, understanding these relationships can contribute to the understanding of media culture and digital trends and influence. This is a comprehensive analysis to identify strategies for boosting a channel's popularity. 
+
+YouTube has become a prominent platform in which creators from diverse backgrounds and with diverse intentions choose to share their work. We initiated this research project after noticing compelling content on certain YouTube channels that, despite their potential for wider acclaim, haven't received the recognition they merit, or on the other hand, seem to receive more recognition than what one would expect. This observation sparked our interest in understanding the factors that influence the popularity of a YouTube channel. Our research question for this project poses the inquiry of What is the relationship between a YouTuber’s category and their popularity, as measured by the number of subscribers and video views? Our goal with this research is to uncover the primary elements that contribute to a YouTube channel's success and to identify if a channel’s category and content type are influential factors. From an individual content creator perspective, insights into popularity factors can contribute to strategy for audience engagement and the enhancement of visibility and impact of the desired content. From a broader point of view, understanding these relationships can contribute to the understanding of media culture and digital trends and influence. This is a comprehensive analysis to identify strategies for boosting a channel's popularity.
 
 <a href="A Statistical Examination of YouTube Genres.pdf" download> Download Report (PDF)</a>
 
