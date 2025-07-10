@@ -1,5 +1,6 @@
 ---
 title: "Feature-Based Clustering of Madonna’s Billboard Hits Using PCA and Hierarchical Methods"
+priority: 1
 image: featured.png
 image-alt: quizgrader logo
 categories:

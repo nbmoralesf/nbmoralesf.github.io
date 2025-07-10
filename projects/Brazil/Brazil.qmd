@@ -1,6 +1,7 @@
 ---
 title: "Deforestation and political shifts in Brazil (2000–2023)"
 description: "Finding a mathematical model, visualize its behavior, and explore how integrals and Riemann sums can help estimate average coffee consumption over a given age range."
+priority: 2
 image: featured.png
 image-alt: quizgrader logo
 categories:
