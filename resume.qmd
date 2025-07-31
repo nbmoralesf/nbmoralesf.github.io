@@ -11,10 +11,10 @@ format:
 
 ## Experiences
 
-<embed src="Natalia Resume.pdf" type="application/pdf" width="100%" height="700px" />
+<embed src="Natalia General Resume.pdf" type="application/pdf" width="100%" height="700px" />
 
 <p style="text-align: center;">
 
-<a href="Natalia Resume.pdf" download> Download Resume (PDF)</a>
+<a href="Natalia General Resume.pdf" download> Download Resume (PDF)</a>
 
 </p>
