@@ -1,7 +1,7 @@
 ---
 title: "Weather"
-
 ---
+
 Recreation of an original New York Times graphic regarding weather in different cities over 2011.
 
 # Setup
@@ -14,7 +14,6 @@ library(ggpubr)
 library(gridExtra)
 library(patchwork)
 ```
-
 
 ```{r}
 weather <- read_csv("https://mac-stat.github.io/data/sfo_weather.csv")
@@ -92,6 +91,3 @@ draft <- egg::ggarrange(temp, precip, nrow = 2, widths = c(10,10), heights = c(3
 SFO_weather_2011 <- annotate_figure(draft, top = text_grob("SFO Weather in 2011"))
 SFO_weather_2011
 ```
-
-
-
