@@ -17,6 +17,8 @@ website:
         text: Projects
       - href: resume.qmd
         text: Resume
+      - href: Gallery.qmd
+        text: Gallery
         
     right: 
       - icon: github

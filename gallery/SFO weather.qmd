@@ -1,0 +1,102 @@
+---
+title: "Weather"
+priority: 1
+image: SFO_weather_2011.png
+image-alt: quizgrader logo
+about:
+  template: solana
+  image: SFO_weather_2011.png
+---
+Recreation of an original New York Times graphic regarding weather in different cities over 2011.
+
+# Setup
+
+```{r message=FALSE}
+# Code for loading packages and reading in data
+library(tidyverse)
+library(egg)
+library(ggpubr)
+library(gridExtra)
+library(patchwork)
+```
+
+
+```{r}
+weather <- read_csv("https://mac-stat.github.io/data/sfo_weather.csv")
+```
+
+```{r}
+month_CulmPrec <- weather %>% 
+  group_by(Month) %>% 
+  filter(Day == max(Day)) %>% 
+  ungroup()
+
+last_days <- weather %>% 
+  group_by(Month) %>% 
+  filter(Day == max(Day))
+```
+
+# Visualization
+
+```{r}
+# Code for recreating the visualization
+# Use as many code chunks as you need to organize your work well
+temp <- weather %>% 
+  ggplot() +
+  geom_linerange(aes(x = dateInYear, ymax = RecordHigh, ymin = RecordLow), color = "#ECEBE3") +
+  geom_linerange(aes(x = dateInYear, ymax = NormalHigh, ymin = NormalLow), color = "#C8B8BA") +
+  geom_rect(aes(xmin = dateInYear - 0.5, xmax = dateInYear + 0.5, ymax = High, ymin = Low), color = "#A90248") +
+  geom_vline(xintercept = last_days$dateInYear, linetype = "dashed", linewidth = .25, color = "gray") +
+  geom_point(data = weather %>% filter(High == RecordHigh), 
+             aes(x = dateInYear, y = RecordHigh), 
+             shape = 25, fill = "black", size = 2) +
+  geom_text(data = weather %>% filter(High == RecordHigh), 
+            aes(x = dateInYear, y = RecordHigh + 5, label = RecordHigh), 
+            size = 2, vjust = 0, color = "black",
+            check_overlap = FALSE) +
+  theme_classic()+
+  
+  theme(axis.line.x = element_blank(),
+        axis.ticks.x = element_blank()) +
+  scale_x_continuous(breaks = seq(15, 365, by = 30), labels = month.abb) +
+  scale_y_continuous(breaks = c(0,40,80,120)) +
+  expand_limits(y=c(-20, ceiling(130))) +
+  labs(title = "Temperature",
+       x = " ",
+       y = " ") +
+  theme(plot.title = element_text(face = "bold"))
+```
+
+```{r}
+precip <- weather %>% 
+  ggplot(aes(x = dateInYear)) +
+    geom_vline(xintercept = last_days$dateInYear, color = "gray", linewidth = .25) +
+    geom_ribbon(aes(ymax = CulmPrec, ymin = 0, group = Month), fill = "#ebeae2") +
+    geom_line(aes(y = CulmPrec), color = "#32a3d8", linewidth = 0.3) +
+    geom_point(data = weather %>% filter(RecordP == TRUE), 
+               aes(x = dateInYear, y = CulmPrec), 
+               shape = 25, fill = "black", size = 1) +
+    geom_text(data = month_CulmPrec, 
+              aes(x = dateInYear, y = CulmPrec + 0.5, label = round(CulmPrec, 2)), 
+              size = 2, vjust = 0, color = "black") +  
+    theme_classic() +
+    theme(axis.line.x = element_blank(),
+          
+          axis.ticks.x = element_blank(),
+          axis.text.x = element_blank(),
+          plot.title = element_text(face = "bold")) +
+    scale_y_continuous(breaks = c(4,8),
+                      expand = c(0.35, 0)) +
+    labs(title = "Precipitation",
+         x = " ",
+         y = " ")
+```
+
+```{r}
+draft <- egg::ggarrange(temp, precip, nrow = 2, widths = c(10,10), heights = c(3,1))
+SFO_weather_2011 <- annotate_figure(draft, top = text_grob("SFO Weather in 2011"))
+SFO_weather_2011
+```
+
+
+
