@@ -1,0 +1,109 @@
+---
+title: "Crashes Ramsey County, Saint Paul"
+priority: 2
+image: featured.png
+image-alt: quizgrader logo
+about:
+  template: solana
+  image: featured.png
+---
+
+These visualizations are original, made as an exploration of crashes in the Saint Paul, MN area, specifically around Ramsey County.
+
+# Setup
+```{r}
+library(patchwork)
+library(sf)
+library(tidyverse)
+library(tidycensus)
+```
+
+```{r reading, message=FALSE, warning=FALSE, results="hide", eval=FALSE}
+census2020 <- tidycensus::get_acs(
+    year = 2020,
+    state = "MN",
+    geography = "tract",
+    variables = c("B01003_001", "B19013_001", "B23006_023", "B25058_001", "B25107_001", "B25003_001", "B25003_002", "B25003_003", "B25077_001", "B08303_001"),
+    output = "wide",
+    geometry = TRUE
+) %>%
+    filter(word(NAME, 4) %in% c("Ramsey")) %>%
+    mutate(
+        tract = word(NAME, 3),
+        tract = str_remove(tract, ","),
+        county = word(NAME, 4)
+    ) %>%
+    select(-NAME) %>%
+    rename(
+        "population" = "B01003_001E",
+        "medianIncome" = "B19013_001E",
+        "bachelors" = "B23006_023E",
+        "medContractRent" = "B25058_001E",
+        "tenureTotal" = "B25003_001E",
+        "tenureOwned" = "B25003_002E",
+        "tenureRented" = "B25003_003E",
+        "medianHomeValue"= "B25077_001E",
+        "meanCommuteTime" = "B08303_001E"
+    ) %>%
+    select(-contains("_"))
+
+crashes <- read_csv("https://mac-stat.github.io/data/Crash.csv") %>%
+    filter(!is.na(Latitude), !is.na(Longitude))
+```
+
+```{r reading_roads, eval=FALSE}
+roads <- sf::st_read("Data/tl_2019_27_prisecroads/tl_2019_27_prisecroads.shp")
+
+roads_transformed <- roads %>% st_transform(crs = st_crs(census2020))
+
+# Check CRS of roads and transform if necessary
+st_crs(roads_transformed)
+```
+
+```{r crashes_to_sf, eval=FALSE}
+crashes <- st_as_sf(crashes, coords = c("Longitude", "Latitude"), crs = "NAD83")
+```
+
+```{r crop_roads, eval=FALSE}
+stPaul <- st_bbox(crashes)
+
+roads_sub <- st_crop(roads, stPaul)
+census2020_sub <- st_crop(census2020, stPaul)
+```
+
+```{r join_crashes, eval=FALSE}
+crashes_ped_bike <- crashes %>% 
+    filter(Crash_Type %in% c("Pedestrian", "Bicycle"))
+
+crashes_per_tract <- st_join(crashes_ped_bike,census2020_sub) %>%
+    st_drop_geometry() %>% # removes geometry - makes the following calculation more efficient 
+    filter(!is.na(Accident_Datetime)) %>%
+    count(tract)
+crashes_per_tract
+```
+
+```{r add_geometry_back, eval=FALSE}
+crashes_per_tract_geo <- left_join(census2020_sub, crashes_per_tract, by = "tract") %>%
+    filter(n > 0) %>%
+    st_as_sf()
+```
+
+```{r mas_crashes_census_info, eval=FALSE}
+crashes <- ggplot()+
+    geom_sf(data = census2020_sub, aes(fill = medianIncome, geometry = geometry), color = "white")+
+    geom_sf(data = roads_sub, color = "grey")+
+    geom_sf(data = crashes, color = "red", alpha = 0.5)+
+    scale_fill_gradientn(colors = viridis::viridis(5), name = "Median Income") +  
+      theme_minimal() 
+```
+
+```{r crashes_census_info, eval=FALSE}
+ggplot(crashes_per_tract_geo, aes(x = medianIncome, y = n))+
+  geom_point()+
+  geom_smooth(method = "lm", se = FALSE)+
+  labs(title = "Median Income vs Crashes",
+       x = "Median Income", y = "Number of crashes")
+```
+
+
+
