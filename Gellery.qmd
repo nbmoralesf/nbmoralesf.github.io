@@ -1,0 +1,18 @@
+---
+title: "Gallery"
+listing:
+  contents: projects
+  sort: "priority"
+  type: grid
+  categories: true
+  sort-ui: true
+  filter-ui: true
+page-layout: full
+title-block-banner: true
+comments: false
+
+
+format: html
+editor: visual
+---
+

@@ -30,6 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-listing/list.min.js"></script>
+<script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -66,7 +68,65 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script>
 
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-listing .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-title","listing-author","listing-image","listing-description","listing-categories"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -74,7 +134,7 @@ ul.task-list li input[type="checkbox"] {
 <body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
@@ -101,7 +161,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Resume</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./Gallery.html" aria-current="page"> 
+    <a class="nav-link" href="./Gallery.html"> 
 <span class="menu-text">Gallery</span></a>
   </li>  
 </ul>
@@ -124,48 +184,260 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-page-left">
+      <h1 class="title">Gallery</h1>
+                      </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta column-page-left">
+
+      
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(6)</span></div><div class="category" data-category="Calculus">Calculus <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Collaborative Work">Collaborative Work <span class="quarto-category-count">(3)</span></div><div class="category" data-category="Data Analysis">Data Analysis <span class="quarto-category-count">(5)</span></div><div class="category" data-category="Empirical Research">Empirical Research <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Jordan">Jordan <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Machine Learning">Machine Learning <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Policy Brief">Policy Brief <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Political Science">Political Science <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Shiny">Shiny <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
-<main class="content column-page" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Gallery</h1>
-</div>
+<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
 
 
 
-<div class="quarto-title-meta column-page">
 
-    
-  
-    
+
+
+
+
+
+<div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
+<div class="listing-actions-group">
+   <div class="input-group input-group-sm quarto-listing-sort">
+     <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
+     <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
+       <option value="" disabled="" selected="" hidden="">Order By</option>
+       <option value="index" data-direction="asc">Default</option>
+         <option value="listing-title" data-direction="asc">
+          Title
+        </option>
+         <option value="listing-author" data-direction="asc">
+          Author
+        </option>
+     </select>
   </div>
-  
-
-
-</header>
-
-
-<p>This is a collection of visualizations made by me. It is a combination of reproductions and original visualizations made with R, including packages like ggplot, plotly, and being included in Shiny apps and websites.</p>
-<div class="grid grid-3">
-<div class="g-col-1">
-<p><a href="gallery/viz1.qmd"><img src="images/viz1-thumb.png" class="img-fluid" alt="Viz 1"></a></p>
+    <div class="input-group input-group-sm quarto-listing-filter">
+      <span class="input-group-text"><i class="bi bi-search"></i></span>
+      <input type="text" class="search form-control" placeholder="Filter">
+    </div>
 </div>
-<div class="g-col-1">
-<p><a href="gallery/viz2.qmd"><img src="images/viz2-thumb.png" class="img-fluid" alt="Viz 2"></a></p>
+<div class="list grid quarto-listing-cols-3">
+<div class="g-col-1" data-index="0" data-categories="Machine Learning,Data Analysis,Collaborative Work" data-listing-file-modified-sort="1753120536761" data-listing-reading-time-sort="1" data-listing-word-count-sort="151">
+<a href="./projects/Madonna/Madonna.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="./projects/Madonna/featured.png" class="thumbnail-image card-img" style="height: 150px;" alt="quizgrader logo">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Feature-Based Clustering of Madonna’s Billboard Hits Using PCA and Hierarchical Methods
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Machine Learning'); return false;">
+Machine Learning
 </div>
-<div class="g-col-1">
-<p><a href="gallery/viz3.qmd"><img src="images/viz3-thumb.png" class="img-fluid" alt="Viz 3"></a></p>
+<div class="listing-category" onclick="window.quartoListingCategory('Data Analysis'); return false;">
+Data Analysis
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Collaborative Work'); return false;">
+Collaborative Work
 </div>
 </div>
+<div class="card-text listing-description">
+In this project, 48 of Madonna’s songs that reached the Billboard Top 100 were analyzed, using unsupervised machine learning techniques to uncover patterns in her musical…
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
 
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="1" data-categories="Shiny,Collaborative Work,Data Analysis" data-listing-file-modified-sort="1752161509025" data-listing-reading-time-sort="1" data-listing-word-count-sort="145">
+<a href="./projects/Brazil/Brazil.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="./projects/Brazil/featured.png" class="thumbnail-image card-img" style="height: 150px;" alt="quizgrader logo">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Deforestation and political shifts in Brazil (2000–2023)
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Shiny'); return false;">
+Shiny
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Collaborative Work'); return false;">
+Collaborative Work
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Data Analysis'); return false;">
+Data Analysis
+</div>
+</div>
+<div class="card-text listing-description">
+Finding a mathematical model, visualize its behavior, and explore how integrals and Riemann sums can help estimate average coffee consumption over a given age range.
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
 
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="2" data-categories="Empirical Research,Data Analysis,Political Science,Jordan" data-listing-file-modified-sort="1752161525121" data-listing-reading-time-sort="1" data-listing-word-count-sort="183">
+<a href="./projects/democracy_jordan/democracy_jordan_report.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="./projects/democracy_jordan/featured.png" class="thumbnail-image card-img" style="height: 150px;" alt="quizgrader logo">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Perceived Suitability of Democracy in Jordan
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Empirical Research'); return false;">
+Empirical Research
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Data Analysis'); return false;">
+Data Analysis
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Political Science'); return false;">
+Political Science
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Jordan'); return false;">
+Jordan
+</div>
+</div>
+<div class="card-text listing-description">
+What are the strongest factors affecting the popular perception of the suitability of democracy in Jordan?
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
 
-</main> <!-- /main -->
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="3" data-categories="Policy Brief,Political Science,Jordan" data-listing-file-modified-sort="1752161540750" data-listing-reading-time-sort="1" data-listing-word-count-sort="147">
+<a href="./projects/Refugees &amp; public schools in Jordan/Jordan_schools_policy_brief.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="./projects/Refugees &amp; public schools in Jordan/featured.png" class="thumbnail-image card-img" style="height: 150px;" alt="quizgrader logo">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Policy Brief: Public Schools in Jordan as Refugee Settings
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Policy Brief'); return false;">
+Policy Brief
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Political Science'); return false;">
+Political Science
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Jordan'); return false;">
+Jordan
+</div>
+</div>
+<div class="card-text listing-description">
+Teacher Management
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="4" data-categories="Data Analysis,Calculus" data-listing-file-modified-sort="1752161553211" data-listing-reading-time-sort="1" data-listing-word-count-sort="146">
+<a href="./projects/Coffee consumption/Coffee Consumption.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="./projects/Coffee consumption/featured.png" class="thumbnail-image card-img" style="height: 150px;" alt="quizgrader logo">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Annual Personal Consumption of Coffee
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Data Analysis'); return false;">
+Data Analysis
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Calculus'); return false;">
+Calculus
+</div>
+</div>
+<div class="card-text listing-description">
+Finding a mathematical model, visualize its behavior, and explore how integrals and Riemann sums can help estimate average coffee consumption over a given age range.
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="5" data-categories="Data Analysis,Collaborative Work" data-listing-file-modified-sort="1752162597779" data-listing-reading-time-sort="2" data-listing-word-count-sort="223">
+<a href="./projects/YouTube genres/Youtube genres.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="./projects/YouTube genres/featured.png" class="thumbnail-image card-img" style="height: 150px;" alt="quizgrader logo">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+YouTube genres
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Data Analysis'); return false;">
+Data Analysis
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Collaborative Work'); return false;">
+Collaborative Work
+</div>
+</div>
+<div class="card-text listing-description">
+Content Categorization and Viewer Behavior: What is the relationship between a YouTuber’s category and their popularity, as measured by the number of subscribers and video…
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+</div>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

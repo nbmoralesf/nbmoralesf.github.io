@@ -1,15 +1,23 @@
 ---
 title: "Gallery"
-listing:
-  contents: gallery
-  sort: "priority"
-  type: grid
-  categories: true
-  sort-ui: true
-  filter-ui: true
+format:
+  html:
+    toc: false
 page-layout: full
-title-block-banner: true
-comments: false
 ---
+
+This is a collection of visualizations made by me. It is a combination of reproductions and original visualizations made with R, including packages like ggplot, plotly, and being included in Shiny apps and websites.
+
+::: {.grid .grid-3}
+::: {.g-col-1}
+[![](images/viz1-thumb.png){alt="Viz 1"}](gallery/viz1.qmd)
+:::
+::: {.g-col-1}
+[![](images/viz2-thumb.png){alt="Viz 2"}](gallery/viz2.qmd)
+:::
+::: {.g-col-1}
+[![](images/viz3-thumb.png){alt="Viz 3"}](gallery/viz3.qmd)
+:::
+:::
 
 
