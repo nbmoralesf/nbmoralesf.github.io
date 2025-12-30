@@ -18,6 +18,9 @@ The end goal is inspired pudding.cool  scrollytelling website that walks users t
 
 ## Product
 
+[View Report](Decoding Cult Classics.html){target="_blank"}
+
+
 ### Screencast
 
 <video width="85%" height="300" controls>
@@ -25,4 +28,3 @@ The end goal is inspired pudding.cool  scrollytelling website that walks users t
   Your browser does not support the video tag.
 </video>
 
-[View Project](https://met-viz.netlify.app/){target="_blank" .btn .btn-primary}
