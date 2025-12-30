@@ -11,7 +11,7 @@
     "href": "index.html#education",
     "title": "Natalia Morales Flores",
     "section": "Education",
-    "text": "Education\nMacalester College | St. Paul MN  B.A. in Data Science and Political Science | Sept 2022 - May 2026\n\n\nUWC ISAK Japan | Nagano, Japan  International Baccaleaureate Diploma Programme | Aug 2020 - May 2022\n\nLeiden University College | Den Haag, Netherlands  Exchange Program | Jan - June 2024"
+    "text": "Education\nMacalester College | St. Paul MN  B.A. in Data Science and Political Science | May 2026\n\n\nUWC ISAK Japan | Nagano, Japan  International Baccaleaureate Diploma Programme | Aug 2020 - May 2022\n\nLeiden University College | Den Haag, Netherlands  Exchange Program | Jan - June 2024"
   },
   {
     "objectID": "Projects.html",
@@ -116,7 +116,7 @@
     "href": "Gallery.html",
     "title": "Gallery",
     "section": "",
-    "text": "This is a collection of visualizations made by me. It is a combination of reproductions and original visualizations made with R, including packages like ggplot, plotly, and being included in Shiny apps and websites."
+    "text": "This is a collection of visualizations made by me. It is a combination of reproductions and original visualizations made with R or D3, including packages like ggplot, plotly, and being included in Shiny apps and websites."
   },
   {
     "objectID": "gallery/Crashes/Crashes_RC.html",
@@ -138,5 +138,12 @@
     "title": "Gallery",
     "section": "",
     "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nFeature-Based Clustering of Madonna’s Billboard Hits Using PCA and Hierarchical Methods\n\n\n\nMachine Learning\n\n\nData Analysis\n\n\nCollaborative Work\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDeforestation and political shifts in Brazil (2000–2023)\n\n\n\nShiny\n\n\nCollaborative Work\n\n\nData Analysis\n\n\n\nFinding a mathematical model, visualize its behavior, and explore how integrals and Riemann sums can help estimate average coffee consumption over a given age range.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPerceived Suitability of Democracy in Jordan\n\n\n\nEmpirical Research\n\n\nData Analysis\n\n\nPolitical Science\n\n\nJordan\n\n\n\nWhat are the strongest factors affecting the popular perception of the suitability of democracy in Jordan?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPolicy Brief: Public Schools in Jordan as Refugee Settings\n\n\n\nPolicy Brief\n\n\nPolitical Science\n\n\nJordan\n\n\n\nTeacher Management\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAnnual Personal Consumption of Coffee\n\n\n\nData Analysis\n\n\nCalculus\n\n\n\nFinding a mathematical model, visualize its behavior, and explore how integrals and Riemann sums can help estimate average coffee consumption over a given age range.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nYouTube genres\n\n\n\nData Analysis\n\n\nCollaborative Work\n\n\n\nContent Categorization and Viewer Behavior: What is the relationship between a YouTuber’s category and their popularity, as measured by the number of subscribers and video…\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "index.html#get-in-touch",
+    "href": "index.html#get-in-touch",
+    "title": "Natalia Morales Flores",
+    "section": "Get in Touch",
+    "text": "Get in Touch\nEmail: nb.moralesflores@gmail.com\nAddress: 1600 Grand Avenue, Saint Paul, MN 55105\nPhone: 612-490-4642"
   }
 ]

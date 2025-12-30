@@ -6,7 +6,7 @@ format:
 page-layout: full
 ---
 
-This is a collection of visualizations made by me. It is a combination of reproductions and original visualizations made with R, including packages like ggplot, plotly, and being included in Shiny apps and websites.
+This is a collection of visualizations made by me. It is a combination of reproductions and original visualizations made with R or D3, including packages like ggplot, plotly, and being included in Shiny apps and websites.
 
 ::: {.grid .grid-3}
 ::: {.g-col-1}
