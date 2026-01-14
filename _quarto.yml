@@ -17,7 +17,7 @@ website:
         text: Projects
       - href: resume.qmd
         text: Resume
-      - href: Gallery.qmd
+      - href: Gellery.qmd
         text: Gallery
         
     right: 
